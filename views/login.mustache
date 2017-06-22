@@ -6,12 +6,12 @@
   </head>
   <body>
     <form class="" action="" method="post">
-      <input type="hidden" name="next" value="{{next}}">
+      <input type="hidden" name="next" value="{{#next}}{{next}}{{/next}}">
       <div class="">
-        Username: <input type="text" name="username" value="">
+        Username: <input type="text" name="username" value="" placeholder="dan">
       </div>
       <div class="">
-        Password: <input type="password" name="password" value="">
+        Password: <input type="password" name="password" value="" placeholder="123456">
       </div>
       <input type="submit" value="Login">
     </form>
