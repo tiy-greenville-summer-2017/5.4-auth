@@ -40,13 +40,7 @@ app.use(function(req, res, next){
   var pathname = parseurl(req).pathname; // /bar
 
   if(!req.session.user && pathname != '/login'){
-    //let qs = '?next=' + pathname ? pathname != '/login' : '';
-    let qs;
-    if(pathname != '/login'){
-      qs = '?next=' + pathname;
-    }else{
-      qs = '';
-    }
+    let qs = pathname == '/login' ? '' : '?next=' + pathname;
     res.redirect('/login' + qs);
   }else{
     next();
