@@ -22,7 +22,7 @@ app.set('view engine', 'mustache');
 // app.use
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend: false}));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 app.use(session({
   secret: 'keyboard cat',
